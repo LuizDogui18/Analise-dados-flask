@@ -15,7 +15,7 @@ def cadastrar_usuario():
     else:
         return render_template('index2.html')
 
-@app.route('/grafvioleciapib')
+@app.route('/grafvioleciapib', methods=['POST', 'GET'])
 def gerarGrafViolenciaPib():
     if request.method == 'POST':
         filtro = int(request.form.get('valor'))
